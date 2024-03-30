@@ -1,0 +1,17 @@
+.to-do-form form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 5% 0 3% 0;
+}
+
+.to-do-form Button {
+  margin-left: 20px;
+  background-color: black;
+  color: white;
+}
+
+.to-do-form form Button:hover {
+  background-color: black;
+}
