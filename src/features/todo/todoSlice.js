@@ -1,8 +1,8 @@
 import { createSlice, nanoid } from "@reduxjs/toolkit";
 
-// Initial state is empty initially.
 const initialState = {
-  todos: [],
+  // If todos available then get those else empty todos array
+  todos: JSON.parse(localStorage.getItem("todos")) || [],
 };
 
 // Creating a slice which contains all the reducers required.
@@ -17,9 +17,11 @@ export const todoSlice = createSlice({
         text: action.payload,
       };
       state.todos.push(todo);
+      localStorage.setItem("todos", JSON.stringify(state.todos));
     },
     removeTodo: (state, action) => {
       state.todos = state.todos.filter((todo) => todo.id !== action.payload.id);
+      localStorage.setItem("todos", JSON.stringify(state.todos));
     },
   },
 });
