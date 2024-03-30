@@ -4,3 +4,5 @@
 Use Commands in terminal
 1. npm i
 2. npm start
+
+Now project will be running on port:3000
